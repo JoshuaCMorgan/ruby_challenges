@@ -26,14 +26,6 @@ class Anagram
 end
 
 #Challenge: solve this without using ".sort" method
-=begin
-  - iterate through each character
-    - if hash key exits, increment value by 1, 
-    - else set hash key to char and value to 1
-  - iterate through given word,
-      if count of each letter matches hash keys, then save to array.
-=end
-
 
 def anagram(word1, word2)
   return false if word1.downcase == word2.downcase

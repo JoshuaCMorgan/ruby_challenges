@@ -51,7 +51,7 @@ And to total:
   - initialize word
       - handle nil value (convert to string) and upcase each char
   - iterate through each character
-      - get value of character, increment sum by value
+      - retrieve value of character, increment sum by value
 =end
 
 class Scrabble

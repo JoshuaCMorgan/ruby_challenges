@@ -36,8 +36,8 @@ class BeerSong
 
   def verses(start_bottle, stop_bottle)
    
-    lyrics = start_bottle.downto(stop_bottle).map do |bottles|
-      verse(bottles)
+    lyrics = start_bottle.downto(stop_bottle).map do |number|
+      verse(number)
     end
     lyrics.join("\n")
   end

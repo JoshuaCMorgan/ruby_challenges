@@ -38,7 +38,6 @@ class SchoolTest < Minitest::Test
   end
 
   def test_get_students_in_a_non_existant_grade
-    
     assert_equal [], school.grade(1)
   end
 

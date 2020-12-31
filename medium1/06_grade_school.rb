@@ -66,22 +66,25 @@ Note that all our students only have one name. (It's a small town, what do you w
 =end
 
 class School
-
   def initialize
-    @school_roster = Hash.new do |school_roster, grade_level| 
-      school_roster[grade_level] = []
-    end
+   @roster = {}
   end
 
-  def add(student, grade_level)
-    (@school_roster[grade_level] << student).sort!
+  def add(name, grade)
+    @roster[grade] = [] unless @roster[grade]
+    @roster[grade] << name
   end
 
-  def grade(grade_level)
-    @school_roster[grade_level]
+  def grade(_grade)
+   return [] unless @roster[_grade]
+   @roster[_grade]
   end
 
   def to_h
-    @school_roster.sort.to_h
+    result = {}
+    @roster.keys.sort.each do |key|
+      result[key] = @roster[key].sort
+    end
+    result
   end
 end
